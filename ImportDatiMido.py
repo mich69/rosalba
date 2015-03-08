@@ -16,16 +16,16 @@ import string
 import types
 
 try:
-    db = dbapi2.connect (host='192.168.8.108',database="alsit", user="micheleluca", password="micheleluca")
+    db = dbapi2.connect (host='<Indirizzo Ip Server>',database="<Nome database>", user="<username>", password="<password>")
 except Exception, e:
     print e
 
 
-url = 'http://www.idrocontatore.com/alucano/altinv.php'
-data = {'User': 'gruppogps', 'Password': 'gps2013', 'Tipo': '1', 'gg':'0'}
+url = '<Indirizzo URL pagina che espone i dati>'
+data = {'User': '<username>', 'Password': '<password>', 'Tipo': '1', 'gg':'0'}
 headers = {'content-type': 'application/x-www-form-urlencoded'}
 proxies = {
-  "http": "http://192.168.1.23:3128",
+  "http": "http://indirizzo proxy:porta",
 }
 
 def main():

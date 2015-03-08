@@ -15,16 +15,16 @@ import types
 import pymssql
 
 try:
-    db = dbapi2.connect (host='192.168.8.108',database="alsit", user="micheleluca", password="micheleluca")
+    db = dbapi2.connect (host='<Indirizzo Ip Server>',database="<Nome database>", user="<username>", password="<password>")
 except Exception, e:
     print e
 
 cur = db.cursor()
 
-server = "192.168.1.9"
-user = "pda"
-pwd = "pda1"
-db = "Contatori"
+server = "<Indirizzo Ip Server>"
+user = "<username>"
+pwd = "<password>"
+db = "<Nome database>"
 
 def main():
     conn = pymssql.connect(server, user, pwd, db)
